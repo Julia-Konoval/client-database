@@ -134,7 +134,7 @@ export default class {
     } else if (hasChildren === "false" || hasChildren === "") {
       return "FALSE";
     }
-    return "ERROR";
+    return "Error";
   }
 
   checkLicense(license) {

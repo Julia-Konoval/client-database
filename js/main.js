@@ -1,9 +1,9 @@
-import TableCsv from './TableCsv.js';
+import TableCsv from "./TableCsv.js";
 
-const tableRoot = document.querySelector('#csvRoot');
+const tableRoot = document.querySelector("#csvRoot");
 const tableCsv = new TableCsv(tableRoot);
 
-Papa.parse('./data/test.csv', {
+Papa.parse("./data/test.csv", {
   download: true,
   complete: function (results) {
     const headers = results.data[0];
@@ -19,7 +19,6 @@ function updateTable(allData, headers) {
     data.forEach((content, i) => (data[i] = content.trim()));
   });
 
-  headers.unshift('Index');
+  headers.unshift("Index");
   tableCsv.update(allData, headers);
 }
-
