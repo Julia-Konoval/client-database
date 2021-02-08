@@ -1,7 +1,7 @@
-import TableCsv from "./TableCsv.js";
+import TableCSV from "./TableCSV.js";
 
 const tableRoot = document.querySelector("#csvRoot");
-const tableCsv = new TableCsv(tableRoot);
+const tableCSV = new TableCSV(tableRoot);
 
 Papa.parse("./data/test.csv", {
   download: true,
@@ -20,5 +20,5 @@ function updateTable(allData, headers) {
   });
 
   headers.unshift("Index");
-  tableCsv.update(allData, headers);
+  tableCSV.update(allData, headers);
 }
